@@ -39,7 +39,6 @@ describe "fixtures behavior" do
     subject do
       puts "running subject, ivar is #{@fixture_run_count}"
       increment_fixture_run_count
-      @fixture_run_count
     end
     it { should == 1 }
     it { should == 2 } # fails here; subject is 1, not 2 ... vars have reset perhaps
@@ -49,4 +48,3 @@ describe "fixtures behavior" do
     end
   end
 end
-
